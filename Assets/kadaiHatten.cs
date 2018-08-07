@@ -24,15 +24,15 @@ public class Boss
 
     public int Magic(int MP)
     {
-        MP -= 5;
 
-        if (MP >= 0)
+        if (MP >= 5)
         {
+            MP -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + MP);
         }
         else
         {
-            Debug.Log("MPが足りないため魔法が使えない。");
+            Debug.Log("MPが足りないため魔法が使えない。残りMPは" + MP);
         }
 
         return MP;
@@ -53,17 +53,19 @@ public class kadaiHatten : MonoBehaviour
 
         Debug.Log("1回目");
         currentMP = magicBoss.Magic(currentMP);
-        
 
-        for(int i = 0; i < 9; i++)
+
+        for (int i = 0; i < 9; i++)
         {
-            Debug.Log((i+2) + "回目");
+            Debug.Log((i + 2) + "回目");
             currentMP = magicBoss.Magic(currentMP);
         };
 
         Debug.Log("11回目");
         magicBoss.Magic(currentMP);
 
+        Debug.Log("12回目");
+        magicBoss.Magic(currentMP);
 
     }
 
