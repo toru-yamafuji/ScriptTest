@@ -55,17 +55,11 @@ public class kadaiHatten : MonoBehaviour
         currentMP = magicBoss.Magic(currentMP);
 
 
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 15; i++)
         {
             Debug.Log((i + 2) + "回目");
             currentMP = magicBoss.Magic(currentMP);
         };
-
-        Debug.Log("11回目");
-        magicBoss.Magic(currentMP);
-
-        Debug.Log("12回目");
-        magicBoss.Magic(currentMP);
 
     }
 
